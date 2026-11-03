@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRecoveryVault — Local-First Markdown Recovery & Cold AI Governance</title>
+  <meta name="description" content="A local-first, plain-text Markdown recovery framework inside Obsidian with strict, cold AI governance for 12-step programs and cognitive hygiene.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            iron: {
+              950: '#0a0d13',
+              900: '#11151d',
+              850: '#161b26',
+              800: '#1e2533',
+              750: '#262f40',
+              700: '#333f54',
+              600: '#475569',
+              500: '#64748b',
+              400: '#94a3b8',
+              300: '#cbd5e1',
+              100: '#f1f5f9'
+            },
+            beacon: {
+              300: '#fed7aa',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              glow: 'rgba(249, 115, 22, 0.18)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'Menlo', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0a0d13;
+      color: #cbd5e1;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Industrial Lattice & Transmission Pulse Background */
+    .bg-lattice-pattern {
+      background-color: #0a0d13;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.15) 0%, transparent 65%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
+    }
+
+    /* Riveted steel card border */
+    .steel-card {
+      background-color: rgba(17, 21, 29, 0.85);
+      border: 1px solid rgba(51, 63, 84, 0.75);
+      position: relative;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .steel-card:hover {
+      border-color: rgba(249, 115, 22, 0.5);
+      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.85), 0 0 20px 2px rgba(249, 115, 22, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* Structural corner rivets */
+    .rivet-tl::before, .rivet-br::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: #475569;
+      border-radius: 50%;
+      box-shadow: inset 1px 1px 1px #000, 0 0 1px #94a3b8;
+    }
+    .rivet-tl::before { top: 7px; left: 7px; }
+    .rivet-br::after { bottom: 7px; right: 7px; }
+
+    /* Amber glow accents */
+    .glow-amber-btn {
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.35);
+    }
+    .glow-amber-btn:hover {
+      box-shadow: 0 0 26px rgba(249, 115, 22, 0.55);
+    }
+
+    /* Subtle pulse animation for radio wave beacon */
+    @keyframes beacon-rings {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.3; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+    .beacon-pulse {
+      animation: beacon-rings 4s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-lattice-pattern min-h-screen flex flex-col justify-between selection:bg-beacon-500/25 selection:text-beacon-300">
+
+  <!-- Main Shell Container -->
+  <div class="w-full relative z-10">
+    
+    <!-- Top Telemetry & Rigging Bar -->
+    <header class="border-b border-iron-800/90 bg-iron-950/90 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between text-xs sm:text-sm">
+        
+        <div class="flex items-center space-x-3">
+          <!-- Signal Icon -->
+          <div class="relative flex items-center justify-center w-7 h-7 rounded border border-beacon-500/40 bg-beacon-500/10 text-beacon-400">
+            <svg class="w-4 h-4 beacon-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.393 9.393a15 15 0 0121.214 0"/>
+            </svg>
+          </div>
+          <a href="#" class="font-mono font-bold tracking-wider text-iron-100 uppercase hover:text-beacon-400 transition-colors">
+            MY RECOVERY VAULT<span class="text-beacon-500">.COM</span>
+          </a>
+          <span class="hidden md:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-iron-850 text-iron-400 border border-iron-700">
+            Sovereign Signal
+          </span>
+        </div>
+        
+        <nav class="flex items-center space-x-3 sm:space-x-6 text-iron-400 font-mono text-xs">
+          <a href="#directories" class="hover:text-iron-100 transition-colors hidden sm:inline">Pockets</a>
+          <a href="#rig-stack" class="hover:text-iron-100 transition-colors">Engine Stack</a>
+          <a href="#box-breakdown" class="hover:text-iron-100 transition-colors hidden md:inline">Vault Anatomy</a>
+          <a href="#ai-onboarding" class="text-beacon-400 hover:text-beacon-300 transition-colors flex items-center gap-1.5 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-beacon-500 animate-ping"></span>
+            llms.txt
+          </a>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- Signal Tower Beacon Hero Header -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-6 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-iron-900 border border-beacon-600/40 text-beacon-400 mb-4">
+        <svg class="w-3.5 h-3.5 text-beacon-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+        </svg>
+        <span>TRANSMISSION STATION // OPEN TELEMETRY</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-mono uppercase mb-3">
+        Steel, Silence & Objective Telemetry
+      </h1>
+      <p class="text-iron-400 text-sm sm:text-base tracking-wide font-normal max-w-2xl leading-relaxed">
+        Local-first Markdown infrastructure, private mirror sync, and cold, bounded AI governance designed to hold your feet to the fire in 12-Step recovery.
+      </p>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
+      
+      <!-- Verbatim Core Hook Hero Card -->
+      <section class="steel-card rivet-tl rivet-br rounded-xl p-6 sm:p-8 backdrop-blur-md relative overflow-hidden shadow-2xl">
+        <div class="absolute -right-16 -top-16 w-52 h-52 bg-beacon-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <blockquote class="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed mb-5 border-l-2 border-beacon-500 pl-4 sm:pl-5">
+          "For anyone working a 12-Step program who has ever felt like their own worst enemy in the quiet between meetings."
+        </blockquote>
+
+        <p class="text-sm sm:text-base text-iron-300 leading-relaxed font-light mb-7">
+          Early on, I was handed the phrase <del class="text-iron-500 decoration-iron-600">Keep</del> <span class="text-beacon-400 font-semibold underline decoration-beacon-500 decoration-2 underline-offset-4">Make</span> <span class="italic text-iron-200">it simple.</span> The problem was, my brain is not simple—and every time I tried to force simplicity, I just found more elaborate ways to fail. Instead of fighting how I was wired, I built an objective, local-first system to out-organize my own self-deception and hold my feet to the fire.
+        </p>
+
+        <!-- CTA & Flow Trigger Button -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+          <!-- Flow modal trigger button -->
+          <button onclick="openDownloadModal()" 
+             class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-semibold bg-beacon-600 hover:bg-beacon-500 text-white transition-all glow-amber-btn group">
+            <svg class="w-4 h-4 text-beacon-200 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span>Download Starter Bundle (.zip)</span>
+            <span class="text-[11px] font-mono text-beacon-200 bg-beacon-700/80 px-2 py-0.5 rounded border border-beacon-400/40">Coming Soon</span>
+          </button>
+
+          <!-- Onboarding copy button shortcut -->
+          <a href="#ai-onboarding" 
+             class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg text-sm font-mono text-iron-300 hover:text-white bg-iron-900/90 hover:bg-iron-800 border border-iron-700 transition-colors">
+            <span class="text-beacon-400 font-bold">>_</span>
+            <span>AI Boot Script (llms.txt)</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 5 Core Hub-and-Spoke Cards (The Vault Pockets) -->
+      <section id="directories" class="space-y-4">
+        <div class="flex items-center justify-between border-b border-iron-800 pb-3">
+          <h2 class="text-xs sm:text-sm font-mono tracking-wider uppercase text-iron-400 flex items-center gap-2 font-semibold">
+            <span class="w-2 h-2 rounded-full bg-beacon-500"></span>
+            Directory Nodes // The 5 Vault Pockets
+          </h2>
+          <span class="text-xs font-mono text-iron-500">Structured Plain-Text</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+          
+          <!-- Card 1: The Foundation -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-beacon-400 bg-beacon-500/10 border border-beacon-500/30 px-2.5 py-0.5 rounded">01 // ARCHITECTURE</span>
+                <span class="font-mono text-xs text-iron-500">/foundation</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">The Foundation & Architecture</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Why local Markdown beats proprietary apps and cloud databases.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Obsidian installation, local storage principles, and private drive sync.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Long-term data durability, exportability, and zero privacy exposure.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">Status: Planned</span>
+              <a href="#" class="text-beacon-400 hover:text-beacon-300 font-medium inline-flex items-center gap-1 group">
+                Read guide <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: AI Governance -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 rounded">02 // PROTOCOL</span>
+                <span class="font-mono text-xs text-iron-500">/governance</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">AI Governance & Guardrails</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 mt-0.5">•</span>
+                  <span>The Anti-Recursion Framework and the Cognitive Atrophy warning.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 mt-0.5">•</span>
+                  <span>Separating raw telemetry (facts) from internal interpretation (stories).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 mt-0.5">•</span>
+                  <span>Hard exit gates: terminating AI chats with immediate physical action directives.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">Status: Drafted</span>
+              <a href="#" class="text-amber-400 hover:text-amber-300 font-medium inline-flex items-center gap-1 group">
+                Read protocol <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Templates & Daily Telemetry -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded">03 // INVENTORY</span>
+                <span class="font-mono text-xs text-iron-500">/templates</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">Templates & Daily Telemetry</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-400 mt-0.5">•</span>
+                  <span>Morning grounding, daily status checks, and evening inventory routines.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-400 mt-0.5">•</span>
+                  <span>Step 4 resentments/fears, Step 8/9 amends ledgers, and Step 10 maintenance.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-400 mt-0.5">•</span>
+                  <span>Establishing custom defect nodes and developing personal behavioral taxonomy.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">Status: Planned</span>
+              <a href="#" class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1 group">
+                Inspect templates <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Faith & Scripture Add-On -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/30 px-2.5 py-0.5 rounded">04 // MODULAR</span>
+                <span class="font-mono text-xs text-iron-500">/faith</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">Faith & Scripture Add-On <span class="text-xs text-iron-400 font-normal">(Optional)</span></h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>100% modular isolation: entirely segregated from core recovery mechanics.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>Chapter-by-chapter scripture logs and Sunday sermon intake scratchpads.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>Clean deletion path for secular users without breaking any core vault links.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">Status: Standalone</span>
+              <a href="#" class="text-sky-400 hover:text-sky-300 font-medium inline-flex items-center gap-1 group">
+                Examine module <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Field Notes & Changelog (Spans 2 columns) -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between md:col-span-2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-iron-300 bg-iron-800 border border-iron-700 px-2.5 py-0.5 rounded">05 // TELEMETRY LOG</span>
+                <span class="font-mono text-xs text-iron-500">/changelog</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">Field Notes & Changelog</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-iron-400">
+                <div class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Operational changelogs for prompt updates, vault patches, and template revisions.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Practical field notes on Obsidian mechanics, linking tricks, and sync setups.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Asynchronous community feedback via GitHub and low-friction hosting tip jar.</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">Status: Stream Active</span>
+              <a href="#" class="text-beacon-400 hover:text-beacon-300 font-medium inline-flex items-center gap-1 group">
+                View field notes <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: The Recommended Operational Stack (The Engine Rig) -->
+      <section id="rig-stack" class="steel-card rounded-xl p-6 sm:p-8">
+        <div class="flex items-center justify-between border-b border-iron-800 pb-3 mb-6">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-5 h-5 text-beacon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            <h2 class="text-base font-bold font-mono text-white uppercase tracking-wider">
+              The Field Rig: Recommended Tool Engine
+            </h2>
+          </div>
+          <span class="text-xs font-mono text-iron-500 hidden sm:inline">Zero Vendor Lock-in</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-iron-300 leading-relaxed mb-6 font-light">
+          This system requires zero proprietary app subscriptions. Everything is built on local plain-text Markdown files that you physically own on your hard drive, mirrored securely across your personal hardware:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Obsidian -->
+          <div class="bg-iron-950/80 border border-iron-800 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono text-xs font-bold text-beacon-400 uppercase">Obsidian (Core Engine)</span>
+              <span class="text-[10px] font-mono text-iron-500 border border-iron-800 px-1.5 py-0.5 rounded">Desktop / Mobile</span>
+            </div>
+            <p class="text-xs text-iron-300 leading-relaxed mb-2">
+              The offline storage, bi-directional linking, and Markdown reader.
+            </p>
+            <div class="text-[11px] font-mono text-iron-400 bg-iron-900/90 p-2 rounded border border-iron-800/80">
+              <strong class="text-iron-300">Plugin Bundle:</strong> The starter `.zip` includes the hidden <code class="text-beacon-400">.obsidian/</code> folder with pre-configured settings, keybindings, and lightweight community plugins so it behaves like an instrument immediately.
+            </div>
+          </div>
+
+          <!-- Sync Architecture -->
+          <div class="bg-iron-950/80 border border-iron-800 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono text-xs font-bold text-beacon-400 uppercase">Drive Sync Architecture</span>
+              <span class="text-[10px] font-mono text-iron-500 border border-iron-800 px-1.5 py-0.5 rounded">Multi-Device</span>
+            </div>
+            <ul class="text-xs text-iron-300 space-y-1.5">
+              <li><strong class="text-white">PC / Mac:</strong> Local vault set to <span class="italic text-beacon-300">Mirror files</span> via Google Drive desktop client for automatic off-site redundancy.</li>
+              <li><strong class="text-white">Android / Tablet:</strong> Pair with <span class="text-beacon-300 font-mono">DriveSync</span> to keep local phone storage synchronized with Google Drive.</li>
+              <li><strong class="text-white">iPhone / iPad Alternative:</strong> Use the free <span class="text-beacon-300 font-mono">Remotely Save</span> Obsidian plugin (syncs to Google Drive, S3, or WebDAV) or sync via native iCloud Drive.</li>
+            </ul>
+          </div>
+
+          <!-- ExtendLM -->
+          <div class="bg-iron-950/80 border border-iron-800 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono text-xs font-bold text-beacon-400 uppercase">ExtendLM Extension</span>
+              <span class="text-[10px] font-mono text-iron-500 border border-iron-800 px-1.5 py-0.5 rounded">Chrome Extension</span>
+            </div>
+            <p class="text-xs text-iron-300 leading-relaxed">
+              Browser extension used for high-efficiency source curation. One-click batch intake of exegesis sources, YouTube transcripts (sermons/speaker tapes), and web articles directly into NotebookLM without clipboard clutter.
+            </p>
+          </div>
+
+          <!-- NotebookLM & Gemini Pro -->
+          <div class="bg-iron-950/80 border border-iron-800 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono text-xs font-bold text-beacon-400 uppercase">NotebookLM & Gemini Pro</span>
+              <span class="text-[10px] font-mono text-iron-500 border border-iron-800 px-1.5 py-0.5 rounded">Isolated Query Node</span>
+            </div>
+            <p class="text-xs text-iron-300 leading-relaxed">
+              Strictly isolated read-only models. Mount your exported vault folders or telemetry archives to query multi-month patterns, audit moral inventory adherence, and extract objective behavioral data—zero hallucinations.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- What's In The Box / Vault File Tree Breakdown -->
+      <section id="box-breakdown" class="steel-card rounded-xl p-6 sm:p-8">
+        <div class="flex items-center justify-between border-b border-iron-800 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-beacon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+            </svg>
+            <h2 class="text-base font-bold font-mono text-white uppercase tracking-wider">
+              Anatomy of the Starter Bundle (.zip)
+            </h2>
+          </div>
+          <span class="text-xs font-mono text-iron-500">Unzipped Preview</span>
+        </div>
+        
+        <p class="text-xs sm:text-sm text-iron-300 mb-4 font-light">
+          When you download and unzip the bundle, you won't be looking at an incomprehensible mess of random text files. Every single folder is self-documenting and governed by an instructional <code class="text-beacon-400 font-mono">README.md</code> that AI readers obey:
+        </p>
+
+        <!-- Simulated Directory Tree Box -->
+        <div class="bg-iron-950 border border-iron-800 rounded-lg p-4 font-mono text-xs text-iron-300 overflow-x-auto leading-relaxed">
+<pre class="text-iron-400"><span class="text-beacon-400 font-bold">MyRecoveryVault/</span>
+├── <span class="text-white font-semibold">_System/</span>                          <span class="text-iron-500"># Operational core & rules</span>
+│   ├── <span class="text-iron-300">Master Compass.md</span>             <span class="text-beacon-400/90"># Values, non-negotiables & boundary gates</span>
+│   ├── <span class="text-iron-300">AI Governance/</span>                <span class="text-iron-500"># Anti-recursion prompts & exit gate directives</span>
+│   └── <span class="text-iron-300">Templates/</span>                    <span class="text-iron-500"># Daily status checks, Step 4 & 10 intake</span>
+├── <span class="text-white font-semibold">Journals/</span>                         <span class="text-iron-500"># Time-series telemetry</span>
+│   ├── <span class="text-iron-300">Daily/</span>                        <span class="text-iron-500"># Chronological daily logs (Fact vs Story split)</span>
+│   └── <span class="text-iron-300">Intensive/</span>                    <span class="text-iron-500"># Deep dives, milestone audits & retreats</span>
+├── <span class="text-white font-semibold">Nodes/</span>                            <span class="text-iron-500"># Bi-directional link taxonomy</span>
+│   ├── <span class="text-iron-300">Character Defects/</span>            <span class="text-iron-500"># Fear, Control, Validation, Isolation nodes</span>
+│   ├── <span class="text-iron-300">Affects My/</span>                   <span class="text-iron-500"># Self-esteem, Pocketbook, Ambitions</span>
+│   └── <span class="text-iron-300">Principles/</span>                   <span class="text-iron-500"># Rigorous Honesty, Courage, Service, Surrender</span>
+├── <span class="text-white font-semibold">Step Work/</span>                        <span class="text-iron-500"># Non-linear recovery archives</span>
+│   ├── <span class="text-iron-300">Step 4 Inventories/</span>           <span class="text-iron-500"># Resentment, fear, and sex conduct sheets</span>
+│   └── <span class="text-iron-300">Step 8-9 Amends Ledger/</span>       <span class="text-iron-500"># Living amends tracker & restitution logs</span>
+├── <span class="text-white font-semibold">Directives/</span>                       <span class="text-iron-500"># Behavioral firewalls & work-hour fences</span>
+└── <span class="text-beacon-400/80">.obsidian/</span>                        <span class="text-iron-500"># Pre-configured hotkeys, plugins & themes</span></pre>
+        </div>
+      </section>
+
+      <!-- Automated AI Onboarding Section (/llms.txt) -->
+      <section id="ai-onboarding" class="steel-card rivet-tl rounded-xl p-6 sm:p-7 shadow-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-bold font-mono text-white flex items-center gap-2">
+              <span class="text-beacon-500">>_</span>
+              Automated AI Onboarding (llms.txt)
+            </h2>
+            <p class="text-xs sm:text-sm text-iron-400 mt-0.5">
+              Point your AI directly at this endpoint to run an interactive setup interview.
+            </p>
+          </div>
+          <a href="https://myrecoveryvault.com/llms.txt" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono bg-iron-950 text-beacon-400 border border-beacon-600/40 hover:border-beacon-400 transition-colors w-fit">
+            <span>https://myrecoveryvault.com/llms.txt</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="text-xs sm:text-sm text-iron-300 mb-3">
+          Copy this cold-start prompt and paste it into Claude, ChatGPT, or Gemini. The model reads the raw rules and interviews you to calibrate your Master Compass:
+        </p>
+
+        <!-- Copyable Prompt Box -->
+        <div class="relative bg-iron-950 border border-iron-800 rounded-lg p-4 font-mono text-xs sm:text-sm text-beacon-200/90 leading-relaxed">
+          <code id="promptText" class="block pr-24 select-all">Review https://myrecoveryvault.com/llms.txt. Act as the Recovery Vault Onboarding Agent. Adopt the Anti-Recursion Framework and interview me step-by-step to calibrate my Master Compass and initial directory structure.</code>
+          
+          <button id="copyBtn" onclick="copyPrompt()" 
+                  class="absolute top-3 right-3 px-3 py-1.5 rounded text-xs font-sans font-medium bg-iron-800 hover:bg-iron-750 text-white border border-iron-700 transition-all flex items-center gap-1.5">
+            <svg id="copyIcon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+            </svg>
+            <span id="copyText">Copy Prompt</span>
+          </button>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="hidden mt-2 text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <span>Prompt copied to clipboard. Ready to paste into LLM.</span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer with Peer Share Disclaimer -->
+    <footer class="border-t border-iron-800/80 bg-iron-950 mt-16 py-8 px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto space-y-4 text-center sm:text-left text-xs text-iron-500">
+        
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="font-mono text-iron-400">
+            MyRecoveryVault.com &copy; 2026. Local-First. Sovereign. Plain-Text.
+          </div>
+          <div class="flex items-center gap-4 font-mono">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-iron-300 transition-colors">GitHub Repository</a>
+            <span>•</span>
+            <a href="https://myrecoveryvault.com/llms.txt" class="hover:text-beacon-400 transition-colors">llms.txt</a>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-iron-900 leading-relaxed text-[11px] text-iron-600">
+          <p class="font-medium text-iron-400 mb-1">Authentic Peer Share & Non-Clinical Disclaimer</p>
+          <p>
+            This website and its distributed templates reflect an individual peer share of an operational recovery system. It does not constitute clinical therapy, psychological counseling, or medical guidance. It is entirely independent of, and not endorsed by, Alcoholics Anonymous World Services (AAWS) or any other institution.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Download Flow Checklist Modal (Staging Phase before ZIP Release) -->
+  <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="bg-iron-900 border border-beacon-600/50 rounded-xl max-w-lg w-full p-6 text-left relative shadow-2xl rivet-tl">
+      
+      <!-- Close Button -->
+      <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-iron-400 hover:text-white p-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-2 mb-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-beacon-500"></span>
+        <h3 class="font-mono font-bold text-white text-base uppercase">Vault Download & Ignition Sequence</h3>
+      </div>
+      <p class="text-xs text-iron-400 mb-5 leading-relaxed">
+        Before downloading the raw Starter Bundle, ensure your environment is primed so the vault behaves as an operational telemetry station right away:
+      </p>
+
+      <!-- 3-Step Setup Checklist -->
+      <div class="space-y-3 font-mono text-xs mb-6">
+        <div class="bg-iron-950 p-3 rounded border border-iron-800 flex items-start gap-3">
+          <span class="text-beacon-400 font-bold">01</span>
+          <div>
+            <strong class="text-white block font-sans">Install Obsidian</strong>
+            <span class="text-iron-400 font-sans text-[11px]">Download and install the free Obsidian desktop/mobile app on your devices.</span>
+          </div>
+        </div>
+
+        <div class="bg-iron-950 p-3 rounded border border-iron-800 flex items-start gap-3">
+          <span class="text-beacon-400 font-bold">02</span>
+          <div>
+            <strong class="text-white block font-sans">Configure Mirroring / Sync</strong>
+            <span class="text-iron-400 font-sans text-[11px]">Set up your Google Drive local mirror folder (PC) or DriveSync / Remotely Save (Mobile).</span>
+          </div>
+        </div>
+
+        <div class="bg-iron-950 p-3 rounded border border-iron-800 flex items-start gap-3">
+          <span class="text-beacon-400 font-bold">03</span>
+          <div>
+            <strong class="text-white block font-sans">Open Folder as Vault</strong>
+            <span class="text-iron-400 font-sans text-[11px]">Unpack the zip directly into your synced folder, launch Obsidian, and choose "Open folder as vault".</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button inside Modal -->
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <a href="#" 
+           class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-semibold bg-beacon-600 hover:bg-beacon-500 text-white transition-all glow-amber-btn">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          <span>Download Starter Bundle (.zip)</span>
+          <span class="text-[10px] font-mono text-beacon-200 bg-beacon-700 px-1.5 py-0.5 rounded">Coming Soon (v1.0)</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Client-side Scripts -->
+  <script>
+    // Copy prompt text cleanly using standard textarea approach
+    function copyPrompt() {
+      const promptText = document.getElementById('promptText').innerText;
+      const copyBtn = document.getElementById('copyBtn');
+      const copyText = document.getElementById('copyText');
+      const toast = document.getElementById('toast');
+
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = promptText;
+      tempTextArea.style.position = 'fixed';
+      tempTextArea.style.left = '-9999px';
+      document.body.appendChild(tempTextArea);
+      tempTextArea.focus();
+      tempTextArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          copyText.innerText = 'Copied!';
+          copyBtn.classList.remove('bg-iron-800', 'text-white');
+          copyBtn.classList.add('bg-beacon-700', 'text-white', 'border-beacon-500');
+          toast.classList.remove('hidden');
+
+          setTimeout(() => {
+            copyText.innerText = 'Copy Prompt';
+            copyBtn.classList.remove('bg-beacon-700', 'text-white', 'border-beacon-500');
+            copyBtn.classList.add('bg-iron-800', 'text-white');
+            toast.classList.add('hidden');
+          }, 3500);
+        }
+      } catch (err) {
+        console.error('Copy fallback failed: ', err);
+      } finally {
+        document.body.removeChild(tempTextArea);
+      }
+    }
+
+    // Modal controls for staged download onboarding
+    function openDownloadModal() {
+      document.getElementById('downloadModal').classList.remove('hidden');
+    }
+
+    function closeDownloadModal() {
+      document.getElementById('downloadModal').classList.add('hidden');
+    }
+
+    // Close modal on click outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('downloadModal');
+      if (event.target === modal) {
+        modal.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
