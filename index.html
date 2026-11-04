@@ -139,9 +139,9 @@
         </div>
         
         <nav class="flex items-center space-x-3 sm:space-x-6 text-iron-400 font-mono text-xs">
-          <a href="#directories" class="hover:text-iron-100 transition-colors hidden sm:inline">Pockets</a>
-          <a href="#rig-stack" class="hover:text-iron-100 transition-colors">Engine Stack</a>
-          <a href="#box-breakdown" class="hover:text-iron-100 transition-colors hidden md:inline">Vault Anatomy</a>
+          <a href="#paths" class="hover:text-iron-100 transition-colors hidden sm:inline">Pathways</a>
+          <a href="#rig-stack" class="hover:text-iron-100 transition-colors">Field Rig</a>
+          <a href="#depot" class="hover:text-iron-100 transition-colors hidden md:inline">Downloads</a>
           <a href="#ai-onboarding" class="text-beacon-400 hover:text-beacon-300 transition-colors flex items-center gap-1.5 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-beacon-500 animate-ping"></span>
             llms.txt
@@ -170,7 +170,7 @@
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       
-      <!-- Verbatim Core Hook Hero Card -->
+      <!-- Verbatim Core Hook & Workbench Narrative Hero Card -->
       <section class="steel-card rivet-tl rivet-br rounded-xl p-6 sm:p-8 backdrop-blur-md relative overflow-hidden shadow-2xl">
         <div class="absolute -right-16 -top-16 w-52 h-52 bg-beacon-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -178,194 +178,207 @@
           "For anyone working a 12-Step program who has ever felt like their own worst enemy in the quiet between meetings."
         </blockquote>
 
-        <p class="text-sm sm:text-base text-iron-300 leading-relaxed font-light mb-7">
+        <p class="text-sm sm:text-base text-iron-300 leading-relaxed font-light mb-4">
           Early on, I was handed the phrase <del class="text-iron-500 decoration-iron-600">Keep</del> <span class="text-beacon-400 font-semibold underline decoration-beacon-500 decoration-2 underline-offset-4">Make</span> <span class="italic text-iron-200">it simple.</span> The problem was, my brain is not simple—and every time I tried to force simplicity, I just found more elaborate ways to fail. Instead of fighting how I was wired, I built an objective, local-first system to out-organize my own self-deception and hold my feet to the fire.
         </p>
 
-        <!-- CTA & Flow Trigger Button -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-          <!-- Flow modal trigger button -->
-          <button onclick="openDownloadModal()" 
-             class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-semibold bg-beacon-600 hover:bg-beacon-500 text-white transition-all glow-amber-btn group">
-            <svg class="w-4 h-4 text-beacon-200 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-            </svg>
-            <span>Download Starter Bundle (.zip)</span>
-            <span class="text-[11px] font-mono text-beacon-200 bg-beacon-700/80 px-2 py-0.5 rounded border border-beacon-400/40">Coming Soon</span>
-          </button>
+        <p class="text-sm text-iron-400 leading-relaxed font-light mb-6">
+          This is an unvarnished personal workbench. It is a secure, private harbor to do your actual Step work, log raw behavioral telemetry without narrative spin, and use isolated intelligence tools as a cold truth mirror—never as a digital therapist or an algorithmic yes-man.
+        </p>
 
-          <!-- Onboarding copy button shortcut -->
+        <!-- Narrative Link & AI Trigger (No Premature Download Button) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 border-t border-iron-800">
+          <a href="#paths" 
+             class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-iron-850 hover:bg-iron-800 text-iron-200 border border-iron-700 transition-all group">
+            <span>Explore The 5 Pathways</span>
+            <span class="text-beacon-400 group-hover:translate-x-1 transition-transform">↓</span>
+          </a>
+
           <a href="#ai-onboarding" 
-             class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg text-sm font-mono text-iron-300 hover:text-white bg-iron-900/90 hover:bg-iron-800 border border-iron-700 transition-colors">
+             class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-mono text-iron-300 hover:text-white bg-iron-950 hover:bg-iron-900 border border-iron-800 transition-colors">
             <span class="text-beacon-400 font-bold">>_</span>
             <span>AI Boot Script (llms.txt)</span>
+          </a>
+
+          <a href="#" class="text-xs font-mono text-iron-500 hover:text-beacon-400 sm:ml-auto transition-colors text-center sm:text-right py-2">
+            Read origin narrative & architecture →
           </a>
         </div>
       </section>
 
-      <!-- 5 Core Hub-and-Spoke Cards (The Vault Pockets) -->
-      <section id="directories" class="space-y-4">
+      <!-- 5 Core Structural Paths (Ordered: 01 Rhythm -> 02 Architecture -> 03 Governance -> 04 Literature -> 05 Rig/Depot) -->
+      <section id="paths" class="space-y-4">
         <div class="flex items-center justify-between border-b border-iron-800 pb-3">
           <h2 class="text-xs sm:text-sm font-mono tracking-wider uppercase text-iron-400 flex items-center gap-2 font-semibold">
             <span class="w-2 h-2 rounded-full bg-beacon-500"></span>
-            Directory Nodes // The 5 Vault Pockets
+            System Pathways // Sequential Architecture
           </h2>
           <span class="text-xs font-mono text-iron-500">Structured Plain-Text</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
           
-          <!-- Card 1: The Foundation -->
+          <!-- Path 01: Daily Rhythm & Telemetry -->
           <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs font-semibold text-beacon-400 bg-beacon-500/10 border border-beacon-500/30 px-2.5 py-0.5 rounded">01 // ARCHITECTURE</span>
-                <span class="font-mono text-xs text-iron-500">/foundation</span>
+                <span class="font-mono text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded">01 // EXECUTION</span>
+                <span class="font-mono text-xs text-iron-500">/rhythm</span>
               </div>
-              <h3 class="text-base font-semibold text-white mb-2">The Foundation & Architecture</h3>
+              <h3 class="text-base font-semibold text-white mb-2">Daily Rhythm & Telemetry</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
                 <li class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Why local Markdown beats proprietary apps and cloud databases.</span>
+                  <span class="text-emerald-400 mt-0.5 font-bold">•</span>
+                  <span class="text-iron-200 font-medium">A dedicated, sovereign place to actively DO your Step work (Step 4, 8/9 ledgers, and Step 10 maintenance).</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Obsidian installation, local storage principles, and private drive sync.</span>
+                  <span class="text-emerald-400 mt-0.5">•</span>
+                  <span>Morning calibration and evening status checks enforcing rigid Fact vs. Story separation.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Long-term data durability, exportability, and zero privacy exposure.</span>
+                  <span class="text-emerald-400 mt-0.5">•</span>
+                  <span>Weekly audits to catch pattern drift: <em class="text-iron-300">"Now that you have learned this, what can be applied to your life and actions?"</em></span>
                 </li>
               </ul>
             </div>
             <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
-              <span class="text-iron-500 font-mono">Status: Planned</span>
-              <a href="#" class="text-beacon-400 hover:text-beacon-300 font-medium inline-flex items-center gap-1 group">
-                Read guide <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              <span class="text-iron-500 font-mono">The Daily Walk</span>
+              <a href="#" class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1 group">
+                Review workflow <span class="group-hover:translate-x-0.5 transition-transform">→</span>
               </a>
             </div>
           </div>
 
-          <!-- Card 2: AI Governance -->
+          <!-- Path 02: Architecture & Local Sovereignty -->
           <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 rounded">02 // PROTOCOL</span>
+                <span class="font-mono text-xs font-semibold text-beacon-400 bg-beacon-500/10 border border-beacon-500/30 px-2.5 py-0.5 rounded">02 // ENGINE</span>
+                <span class="font-mono text-xs text-iron-500">/architecture</span>
+              </div>
+              <h3 class="text-base font-semibold text-white mb-2">Architecture & Local Vault</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Local-first Markdown (.md) inside Obsidian: zero proprietary lock-in, zero ad profiling.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Bi-directional <code class="text-beacon-300 font-mono">[[Internal Links]]</code> that turn character defects into active diagnostic hubs across months.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-beacon-500 mt-0.5">•</span>
+                  <span>Private encrypted drive mirroring paired with isolated, read-only AI query nodes (NotebookLM / Gemini Pro).</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
+              <span class="text-iron-500 font-mono">System Rigging</span>
+              <a href="#" class="text-beacon-400 hover:text-beacon-300 font-medium inline-flex items-center gap-1 group">
+                Inspect architecture <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Path 03: AI Governance & Guardrails -->
+          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 rounded">03 // PROTOCOL</span>
                 <span class="font-mono text-xs text-iron-500">/governance</span>
               </div>
               <h3 class="text-base font-semibold text-white mb-2">AI Governance & Guardrails</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
                 <li class="flex items-start gap-2">
                   <span class="text-amber-400 mt-0.5">•</span>
-                  <span>The Anti-Recursion Framework and the Cognitive Atrophy warning.</span>
+                  <span>The Anti-Recursion Framework: kill-switches refusing circular analysis or self-justifying victim scripts.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-amber-400 mt-0.5">•</span>
-                  <span>Separating raw telemetry (facts) from internal interpretation (stories).</span>
+                  <span>Cognitive Atrophy Warning: AI is an external accountability mirror, never a digital sponsor or conscience.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-amber-400 mt-0.5">•</span>
-                  <span>Hard exit gates: terminating AI chats with immediate physical action directives.</span>
+                  <span>Mandatory Physical Exit Gates: every audit ends with an order to shut the laptop and execute real-world action.</span>
                 </li>
               </ul>
             </div>
             <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
-              <span class="text-iron-500 font-mono">Status: Drafted</span>
+              <span class="text-iron-500 font-mono">Truth Mirror</span>
               <a href="#" class="text-amber-400 hover:text-amber-300 font-medium inline-flex items-center gap-1 group">
-                Read protocol <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+                Read protocols <span class="group-hover:translate-x-0.5 transition-transform">→</span>
               </a>
             </div>
           </div>
 
-          <!-- Card 3: Templates & Daily Telemetry -->
+          <!-- Path 04: Literature & Structured Studies -->
           <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded">03 // INVENTORY</span>
-                <span class="font-mono text-xs text-iron-500">/templates</span>
+                <span class="font-mono text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/30 px-2.5 py-0.5 rounded">04 // MODULES</span>
+                <span class="font-mono text-xs text-iron-500">/studies</span>
               </div>
-              <h3 class="text-base font-semibold text-white mb-2">Templates & Daily Telemetry</h3>
+              <h3 class="text-base font-semibold text-white mb-2">Literature & Structured Studies</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
                 <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 mt-0.5">•</span>
-                  <span>Morning grounding, daily status checks, and evening inventory routines.</span>
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>Big Book Module: chapter-by-chapter Markdown notes and dedicated personal story nodes linked to live inventories.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 mt-0.5">•</span>
-                  <span>Step 4 resentments/fears, Step 8/9 amends ledgers, and Step 10 maintenance.</span>
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>Faith & Scripture Add-On: complete 66-book text structure and sermon intake, completely segregated for clean removal if secular.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-emerald-400 mt-0.5">•</span>
-                  <span>Establishing custom defect nodes and developing personal behavioral taxonomy.</span>
+                  <span class="text-sky-400 mt-0.5">•</span>
+                  <span>Cross-linking recovery text directly into daily slips, transforming passive reading into active behavioral defense.</span>
                 </li>
               </ul>
             </div>
             <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
-              <span class="text-iron-500 font-mono">Status: Planned</span>
-              <a href="#" class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1 group">
-                Inspect templates <span class="group-hover:translate-x-0.5 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 4: Faith & Scripture Add-On -->
-          <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/30 px-2.5 py-0.5 rounded">04 // MODULAR</span>
-                <span class="font-mono text-xs text-iron-500">/faith</span>
-              </div>
-              <h3 class="text-base font-semibold text-white mb-2">Faith & Scripture Add-On <span class="text-xs text-iron-400 font-normal">(Optional)</span></h3>
-              <ul class="space-y-2 text-xs sm:text-sm text-iron-400">
-                <li class="flex items-start gap-2">
-                  <span class="text-sky-400 mt-0.5">•</span>
-                  <span>100% modular isolation: entirely segregated from core recovery mechanics.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sky-400 mt-0.5">•</span>
-                  <span>Chapter-by-chapter scripture logs and Sunday sermon intake scratchpads.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-sky-400 mt-0.5">•</span>
-                  <span>Clean deletion path for secular users without breaking any core vault links.</span>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
-              <span class="text-iron-500 font-mono">Status: Standalone</span>
+              <span class="text-iron-500 font-mono">Living Text</span>
               <a href="#" class="text-sky-400 hover:text-sky-300 font-medium inline-flex items-center gap-1 group">
-                Examine module <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+                Explore modules <span class="group-hover:translate-x-0.5 transition-transform">→</span>
               </a>
             </div>
           </div>
 
-          <!-- Card 5: Field Notes & Changelog (Spans 2 columns) -->
+          <!-- Path 05: Field Rig & Deployment Depot (Full Span) -->
           <div class="steel-card rivet-tl rounded-xl p-5 flex flex-col justify-between md:col-span-2">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs font-semibold text-iron-300 bg-iron-800 border border-iron-700 px-2.5 py-0.5 rounded">05 // TELEMETRY LOG</span>
-                <span class="font-mono text-xs text-iron-500">/changelog</span>
+                <span class="font-mono text-xs font-semibold text-beacon-400 bg-beacon-500/10 border border-beacon-500/30 px-2.5 py-0.5 rounded">05 // DEPOT</span>
+                <span class="font-mono text-xs text-iron-500">/rig-and-depot</span>
               </div>
-              <h3 class="text-base font-semibold text-white mb-2">Field Notes & Changelog</h3>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-iron-400">
-                <div class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Operational changelogs for prompt updates, vault patches, and template revisions.</span>
+              <h3 class="text-base font-semibold text-white mb-2">The Field Rig & Deployment Depot</h3>
+              <p class="text-xs sm:text-sm text-iron-400 leading-relaxed mb-4">
+                The staging ground for all physical tools and clean vault payloads. Download the master bundle or pull individual modular packs, with pre-configured settings, keybindings, and plugins included.
+              </p>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono text-iron-300">
+                <div class="bg-iron-950/80 p-2.5 rounded border border-iron-800">
+                  <strong class="text-white block text-[11px]">Obsidian</strong>
+                  <span class="text-iron-500 text-[10px]">Local Reader Engine</span>
                 </div>
-                <div class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Practical field notes on Obsidian mechanics, linking tricks, and sync setups.</span>
+                <div class="bg-iron-950/80 p-2.5 rounded border border-iron-800">
+                  <strong class="text-white block text-[11px]">Drive Sync</strong>
+                  <span class="text-iron-500 text-[10px]">PC Mirror / Remotely Save</span>
                 </div>
-                <div class="flex items-start gap-2">
-                  <span class="text-beacon-500 mt-0.5">•</span>
-                  <span>Asynchronous community feedback via GitHub and low-friction hosting tip jar.</span>
+                <div class="bg-iron-950/80 p-2.5 rounded border border-iron-800">
+                  <strong class="text-white block text-[11px]">ExtendLM</strong>
+                  <span class="text-iron-500 text-[10px]">Browser Source Intake</span>
+                </div>
+                <div class="bg-iron-950/80 p-2.5 rounded border border-iron-800">
+                  <strong class="text-white block text-[11px]">NotebookLM</strong>
+                  <span class="text-iron-500 text-[10px]">Isolated Context Audits</span>
                 </div>
               </div>
             </div>
-            <div class="mt-4 pt-3 border-t border-iron-800 flex justify-between items-center text-xs">
-              <span class="text-iron-500 font-mono">Status: Stream Active</span>
-              <a href="#" class="text-beacon-400 hover:text-beacon-300 font-medium inline-flex items-center gap-1 group">
-                View field notes <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+
+            <div class="mt-5 pt-3 border-t border-iron-800 flex flex-col sm:flex-row justify-between items-center gap-3">
+              <span class="text-iron-500 font-mono text-xs">Releases hosted on GitHub</span>
+              <a href="#depot" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded text-xs font-semibold bg-beacon-600 hover:bg-beacon-500 text-white transition-colors glow-amber-btn">
+                <span>View Download Depot</span>
+                <span>→</span>
               </a>
             </div>
           </div>
@@ -469,19 +482,126 @@
 ├── <span class="text-white font-semibold">_System/</span>                          <span class="text-iron-500"># Operational core & rules</span>
 │   ├── <span class="text-iron-300">Master Compass.md</span>             <span class="text-beacon-400/90"># Values, non-negotiables & boundary gates</span>
 │   ├── <span class="text-iron-300">AI Governance/</span>                <span class="text-iron-500"># Anti-recursion prompts & exit gate directives</span>
-│   └── <span class="text-iron-300">Templates/</span>                    <span class="text-iron-500"># Daily status checks, Step 4 & 10 intake</span>
-├── <span class="text-white font-semibold">Journals/</span>                         <span class="text-iron-500"># Time-series telemetry</span>
-│   ├── <span class="text-iron-300">Daily/</span>                        <span class="text-iron-500"># Chronological daily logs (Fact vs Story split)</span>
-│   └── <span class="text-iron-300">Intensive/</span>                    <span class="text-iron-500"># Deep dives, milestone audits & retreats</span>
+│   └── <span class="text-iron-300">Templates/</span>                    <span class="text-iron-500"># Step 4, Step 8/9, Step 10 maintenance intake</span>
+├── <span class="text-white font-semibold">Journals/</span>                         <span class="text-iron-500"># Chronological flight telemetry</span>
+│   ├── <span class="text-iron-300">Daily/</span>                        <span class="text-iron-500"># Daily logs (Fact vs Story delimiters)</span>
+│   └── <span class="text-iron-300">Intensive/</span>                    <span class="text-iron-500"># Milestones, retreats, and deep-dive audits</span>
 ├── <span class="text-white font-semibold">Nodes/</span>                            <span class="text-iron-500"># Bi-directional link taxonomy</span>
-│   ├── <span class="text-iron-300">Character Defects/</span>            <span class="text-iron-500"># Fear, Control, Validation, Isolation nodes</span>
-│   ├── <span class="text-iron-300">Affects My/</span>                   <span class="text-iron-500"># Self-esteem, Pocketbook, Ambitions</span>
+│   ├── <span class="text-iron-300">Character Defects/</span>            <span class="text-iron-500"># Control, Validation, Fear, Isolation hubs</span>
+│   ├── <span class="text-iron-300">Affects My/</span>                   <span class="text-iron-500"># Self-esteem, Pocketbook, Ambitions, Security</span>
 │   └── <span class="text-iron-300">Principles/</span>                   <span class="text-iron-500"># Rigorous Honesty, Courage, Service, Surrender</span>
-├── <span class="text-white font-semibold">Step Work/</span>                        <span class="text-iron-500"># Non-linear recovery archives</span>
-│   ├── <span class="text-iron-300">Step 4 Inventories/</span>           <span class="text-iron-500"># Resentment, fear, and sex conduct sheets</span>
-│   └── <span class="text-iron-300">Step 8-9 Amends Ledger/</span>       <span class="text-iron-500"># Living amends tracker & restitution logs</span>
-├── <span class="text-white font-semibold">Directives/</span>                       <span class="text-iron-500"># Behavioral firewalls & work-hour fences</span>
+├── <span class="text-white font-semibold">Step Work/</span>                        <span class="text-iron-500"># Dedicated, active step workshops</span>
+│   ├── <span class="text-iron-300">Step 4 Inventories/</span>           <span class="text-iron-500"># Resentments, fears, sex conduct columns</span>
+│   └── <span class="text-iron-300">Step 8-9 Amends Ledger/</span>       <span class="text-iron-500"># Living amends tracking & restitution log</span>
+├── <span class="text-white font-semibold">Directives/</span>                       <span class="text-iron-500"># Behavioral firewalls & work-hour boundaries</span>
 └── <span class="text-beacon-400/80">.obsidian/</span>                        <span class="text-iron-500"># Pre-configured hotkeys, plugins & themes</span></pre>
+        </div>
+      </section>
+
+      <!-- Section: The Download Depot (Modular Tiers) -->
+      <section id="depot" class="steel-card rivet-tl rounded-xl p-6 sm:p-8">
+        <div class="flex items-center justify-between border-b border-iron-800 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-beacon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <h2 class="text-base font-bold font-mono text-white uppercase tracking-wider">
+              Download Depot // Modular Releases
+            </h2>
+          </div>
+          <span class="text-xs font-mono text-beacon-400 bg-beacon-500/10 px-2 py-0.5 rounded border border-beacon-500/30">Release v1.0 Staging</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-iron-300 leading-relaxed mb-6 font-light">
+          Choose the complete system or pull isolated packages. Every zip contains pure, sanitized Markdown files with pre-configured directory guides—ready to open in Obsidian immediately.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <!-- Tier 1: Master All-In-One Bundle -->
+          <div class="bg-iron-950 p-4 rounded-lg border border-beacon-600/40 relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-mono text-xs font-bold text-beacon-400 uppercase">Master Starter Bundle</span>
+                <span class="text-[10px] font-mono text-beacon-300 bg-beacon-700/60 px-1.5 py-0.5 rounded">All-In-One</span>
+              </div>
+              <p class="text-xs text-iron-300 leading-relaxed mb-3">
+                Complete turnkey structure: Core recovery folders, Big Book notes, AI governance rules, pre-configured Obsidian plugins, and default Master Compass.
+              </p>
+            </div>
+            <button onclick="openDownloadModal('Master Starter Bundle (.zip)')" 
+                    class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded text-xs font-mono font-semibold bg-beacon-600 hover:bg-beacon-500 text-white transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <span>Download Master (.zip)</span>
+              <span class="text-[9px] bg-beacon-800 px-1 py-0.5 rounded text-beacon-200">Coming Soon</span>
+            </button>
+          </div>
+
+          <!-- Tier 2: Core Recovery Only -->
+          <div class="bg-iron-950 p-4 rounded-lg border border-iron-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-mono text-xs font-bold text-white uppercase">Core Recovery Only</span>
+                <span class="text-[10px] font-mono text-iron-500 border border-iron-800 px-1.5 py-0.5 rounded">Secular / Lean</span>
+              </div>
+              <p class="text-xs text-iron-400 leading-relaxed mb-3">
+                Lean, modular recovery core: Daily journals, Step 4 & 10 templates, amends ledgers, and defect nodes. Zero faith or literature folders included.
+              </p>
+            </div>
+            <button onclick="openDownloadModal('Core Recovery Pack (.zip)')" 
+                    class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded text-xs font-mono font-semibold bg-iron-800 hover:bg-iron-750 text-iron-200 transition-colors border border-iron-700">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <span>Download Core Pack (.zip)</span>
+              <span class="text-[9px] bg-iron-900 px-1 py-0.5 rounded text-iron-400">Coming Soon</span>
+            </button>
+          </div>
+
+          <!-- Tier 3: Big Book Study Module -->
+          <div class="bg-iron-950 p-4 rounded-lg border border-iron-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-mono text-xs font-bold text-white uppercase">Big Book Literature Pack</span>
+                <span class="text-[10px] font-mono text-sky-400 border border-sky-900/60 bg-sky-950/40 px-1.5 py-0.5 rounded">Module</span>
+              </div>
+              <p class="text-xs text-iron-400 leading-relaxed mb-3">
+                Pre-formatted `.md` notes for all chapters and personal stories. Formatted with cross-link anchors for direct bi-directional linking to inventory notes.
+              </p>
+            </div>
+            <button onclick="openDownloadModal('Big Book Literature Pack (.zip)')" 
+                    class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded text-xs font-mono font-semibold bg-iron-800 hover:bg-iron-750 text-iron-200 transition-colors border border-iron-700">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <span>Download Big Book Pack (.zip)</span>
+              <span class="text-[9px] bg-iron-900 px-1 py-0.5 rounded text-iron-400">Coming Soon</span>
+            </button>
+          </div>
+
+          <!-- Tier 4: Faith & Scripture Add-On -->
+          <div class="bg-iron-950 p-4 rounded-lg border border-iron-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-mono text-xs font-bold text-white uppercase">Faith & Scripture Pack</span>
+                <span class="text-[10px] font-mono text-amber-400 border border-amber-900/60 bg-amber-950/40 px-1.5 py-0.5 rounded">Optional Add-On</span>
+              </div>
+              <p class="text-xs text-iron-400 leading-relaxed mb-3">
+                Individual Markdown files for all 66 books of the Bible, sermon intake scratchpads, and inductive study nodes. 100% modular.
+              </p>
+            </div>
+            <button onclick="openDownloadModal('Faith & Scripture Pack (.zip)')" 
+                    class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded text-xs font-mono font-semibold bg-iron-800 hover:bg-iron-750 text-iron-200 transition-colors border border-iron-700">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <span>Download Faith Pack (.zip)</span>
+              <span class="text-[9px] bg-iron-900 px-1 py-0.5 rounded text-iron-400">Coming Soon</span>
+            </button>
+          </div>
+
         </div>
       </section>
 
@@ -579,8 +699,10 @@
         <span class="w-2.5 h-2.5 rounded-full bg-beacon-500"></span>
         <h3 class="font-mono font-bold text-white text-base uppercase">Vault Download & Ignition Sequence</h3>
       </div>
+      <p id="modalPackageName" class="text-xs font-mono text-beacon-400 mb-4">Target: Master Starter Bundle (.zip)</p>
+
       <p class="text-xs text-iron-400 mb-5 leading-relaxed">
-        Before downloading the raw Starter Bundle, ensure your environment is primed so the vault behaves as an operational telemetry station right away:
+        Before unpacking the raw Starter Bundle, prime your local machine so the vault behaves as an operational telemetry station right out of the box:
       </p>
 
       <!-- 3-Step Setup Checklist -->
@@ -589,7 +711,7 @@
           <span class="text-beacon-400 font-bold">01</span>
           <div>
             <strong class="text-white block font-sans">Install Obsidian</strong>
-            <span class="text-iron-400 font-sans text-[11px]">Download and install the free Obsidian desktop/mobile app on your devices.</span>
+            <span class="text-iron-400 font-sans text-[11px]">Download and install Obsidian on your desktop or mobile device.</span>
           </div>
         </div>
 
@@ -597,7 +719,7 @@
           <span class="text-beacon-400 font-bold">02</span>
           <div>
             <strong class="text-white block font-sans">Configure Mirroring / Sync</strong>
-            <span class="text-iron-400 font-sans text-[11px]">Set up your Google Drive local mirror folder (PC) or DriveSync / Remotely Save (Mobile).</span>
+            <span class="text-iron-400 font-sans text-[11px]">Point to a local Google Drive mirror folder (PC) or use DriveSync / Remotely Save (Mobile).</span>
           </div>
         </div>
 
@@ -605,7 +727,7 @@
           <span class="text-beacon-400 font-bold">03</span>
           <div>
             <strong class="text-white block font-sans">Open Folder as Vault</strong>
-            <span class="text-iron-400 font-sans text-[11px]">Unpack the zip directly into your synced folder, launch Obsidian, and choose "Open folder as vault".</span>
+            <span class="text-iron-400 font-sans text-[11px]">Unpack the zip into your folder, launch Obsidian, and choose "Open folder as vault".</span>
           </div>
         </div>
       </div>
@@ -617,7 +739,7 @@
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          <span>Download Starter Bundle (.zip)</span>
+          <span id="modalBtnText">Download (.zip)</span>
           <span class="text-[10px] font-mono text-beacon-200 bg-beacon-700 px-1.5 py-0.5 rounded">Coming Soon (v1.0)</span>
         </a>
       </div>
@@ -664,8 +786,12 @@
       }
     }
 
-    // Modal controls for staged download onboarding
-    function openDownloadModal() {
+    // Modal controls for staged download onboarding with dynamic package selection
+    function openDownloadModal(packageName = 'Master Starter Bundle (.zip)') {
+      const targetLabel = document.getElementById('modalPackageName');
+      const targetBtn = document.getElementById('modalBtnText');
+      if (targetLabel) targetLabel.innerText = 'Target: ' + packageName;
+      if (targetBtn) targetBtn.innerText = 'Download ' + packageName;
       document.getElementById('downloadModal').classList.remove('hidden');
     }
 
