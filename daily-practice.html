@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Rhythm & Telemetry // Open Recovery Vault</title>
+  <title>Daily Rhythm &amp; Telemetry // Open Recovery Vault</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -17,9 +17,8 @@
               950: '#07090d',
               900: '#0c1017',
               850: '#111722',
-              800: '#18202f',
+              800: '#161e2e',
               700: '#222d42',
-              600: '#32415d',
             },
             iron: {
               100: '#f1f5f9',
@@ -35,7 +34,6 @@
             beacon: {
               400: '#38bdf8',
               500: '#0ea5e9',
-              600: '#0284c7',
             },
             amber: {
               400: '#fbbf24',
@@ -49,7 +47,6 @@
           fontFamily: {
             mono: ['"JetBrains Mono"', 'monospace'],
             sans: ['"Space Grotesk"', 'sans-serif'],
-            serif: ['"Newsreader"', 'serif'],
           }
         }
       }
@@ -57,309 +54,139 @@
   </script>
   <style>
     body {
-      background-color: #07090d;
-      color: #cbd5e1;
+      background-color: #0a0e14;
+      color: #94a3b8;
       background-image: 
-        radial-gradient(ellipse at 50% 0%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 100% 100%, 40px 40px, 40px 40px;
+      background-size: 32px 32px;
     }
-    .prose-custom p {
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-      font-size: 1.0625rem;
+    .steel-card {
+      background: linear-gradient(180deg, #111722 0%, #0c1017 100%);
+      border: 1px solid #1e293b;
+    }
+    .prose-block p {
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body class="min-h-screen font-sans selection:bg-beacon-500 selection:text-vault-950">
 
   <!-- Nav Header -->
-  <header class="border-b border-iron-800 bg-vault-950/80 backdrop-blur sticky top-0 z-50">
+  <header class="border-b border-iron-800 bg-[#0a0e14]/90 backdrop-blur sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 text-iron-400 hover:text-iron-100 transition-colors group">
-        <span class="font-mono text-sm text-beacon-400 group-hover:-translate-x-1 transition-transform">&larr;</span>
+        <span class="font-mono text-sm text-emerald-400 group-hover:-translate-x-1 transition-transform">&larr;</span>
         <span class="font-mono text-xs uppercase tracking-widest">Back to Vault Home</span>
       </a>
       <div class="flex items-center gap-2">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="font-mono text-xs text-iron-500 uppercase tracking-wider">Doc 01 // Daily Telemetry</span>
+        <span class="font-mono text-xs text-iron-500 uppercase tracking-wider">01 // Rhythm &amp; Telemetry</span>
       </div>
     </div>
   </header>
 
   <!-- Main Container -->
-  <main class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+  <main class="max-w-4xl mx-auto px-6 py-12 md:py-16">
 
-    <!-- Article Header -->
-    <header class="mb-14 pb-10 border-b border-iron-800">
-      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded border border-beacon-500/30 bg-beacon-500/10 text-beacon-400 font-mono text-xs uppercase tracking-wider mb-6">
-        <span>Operational Standard</span>
+    <!-- Header Block -->
+    <header class="mb-12 pb-8 border-b border-iron-800">
+      <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 font-mono text-xs uppercase tracking-wider mb-5">
+        <span>01 // EXECUTION</span>
         <span>&bull;</span>
-        <span>Flight Telemetry</span>
+        <span>Daily Telemetry Standard</span>
       </div>
-      <h1 class="text-3xl md:text-5xl font-bold text-iron-100 tracking-tight leading-tight mb-6 font-sans">
-        Daily Rhythm & Telemetry
+      <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-4">
+        Daily Rhythm &amp; Telemetry
       </h1>
-      <p class="text-lg md:text-xl text-iron-400 font-serif italic leading-relaxed">
-        Moving from passive journaling to an instrumented daily workbench. How local privacy enables leading-indicator honesty, structured defect tracking, and compound pattern discovery.
+      <p class="text-base md:text-lg text-iron-400 leading-relaxed max-w-3xl">
+        Moving from passive journaling to an instrumented daily workbench. How radical local privacy enables leading-indicator honesty, structured defect tracking, and compound pattern discovery.
       </p>
     </header>
 
     <!-- Document Content -->
-    <article class="prose-custom text-iron-300 font-serif">
+    <article class="prose-block text-iron-300">
 
       <!-- Section I -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">01 //</span>
+      <section class="mb-12">
+        <h2 class="text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="font-mono text-xs text-emerald-400">01 //</span>
           The Architectural Premise: Instrumentation Over Sentiment
         </h2>
         <p>
-          Traditional recovery journaling frequently deteriorates into a passive diary—a dumping ground for emotional reactions, self-justifications, and circular looping. When we write without rails, the addict brain naturally uses the page to litigate old resentments, explain away bad behavior, and convince itself that thinking about a problem is the same thing as fixing it.
+          Traditional recovery journaling frequently deteriorates into a passive diary—a dumping ground for emotional reactions, self-justifications, and circular looping. When we write without rails, the addict brain naturally uses the page to litigate old resentments, explain away bad behavior, and convince itself that thinking about a problem is the same thing as fixing it[cite: 1, 6].
         </p>
         <p>
-          In this vault, daily writing is treated as <strong>flight telemetry</strong>. The goal is not creative prose or sentimental reflection, but unvarnished data logging: capturing internal baseline states, detecting subtle behavioral drifts before they compound into a crisis, and clearing interpersonal wreckage before your head hits the pillow[cite: 6, 7].
+          In this vault, daily writing is treated as <strong class="text-white">flight telemetry</strong>[cite: 1]. The goal is not creative prose or sentimental reflection, but unvarnished data logging: capturing internal baseline states, detecting subtle behavioral drifts before they compound into a crisis, and clearing interpersonal wreckage before your head hits the pillow[cite: 6, 7].
         </p>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8 font-sans">
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <p class="font-mono text-xs text-beacon-400 uppercase tracking-widest mb-1">Cycle 01</p>
-            <p class="text-base font-semibold text-iron-200 mb-1">Morning Calibration</p>
-            <p class="text-xs text-iron-400 font-serif">Step 11 grounding, literature anchor, and checking the cognitive baseline before the day engages[cite: 1, 7].</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6 font-sans">
+          <div class="steel-card p-4 rounded-lg">
+            <p class="font-mono text-[11px] text-emerald-400 uppercase tracking-widest mb-1">Cycle 01</p>
+            <p class="text-sm font-semibold text-white mb-1">Morning Calibration</p>
+            <p class="text-xs text-iron-400 leading-relaxed">Step 11 grounding, literature anchor, and checking the baseline before the day engages[cite: 1, 7].</p>
           </div>
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <p class="font-mono text-xs text-amber-400 uppercase tracking-widest mb-1">Cycle 02</p>
-            <p class="text-base font-semibold text-iron-200 mb-1">Daily Inventory</p>
-            <p class="text-xs text-iron-400 font-serif">Step 10 operational tracking, structured defect auditing, and actionable amends planning[cite: 1, 7].</p>
+          <div class="steel-card p-4 rounded-lg">
+            <p class="font-mono text-[11px] text-amber-400 uppercase tracking-widest mb-1">Cycle 02</p>
+            <p class="text-sm font-semibold text-white mb-1">Daily Inventory</p>
+            <p class="text-xs text-iron-400 leading-relaxed">Step 10 operational tracking, structured defect auditing, and actionable amends planning[cite: 1, 7].</p>
           </div>
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <p class="font-mono text-xs text-emerald-400 uppercase tracking-widest mb-1">Cycle 03</p>
-            <p class="text-base font-semibold text-iron-200 mb-1">Trend Audit</p>
-            <p class="text-xs text-iron-400 font-serif">Weekly notebook synthesis to detect blind spots, surfacing underlying drift before it spikes[cite: 1, 5, 7].</p>
+          <div class="steel-card p-4 rounded-lg">
+            <p class="font-mono text-[11px] text-beacon-400 uppercase tracking-widest mb-1">Cycle 03</p>
+            <p class="text-sm font-semibold text-white mb-1">Trend Audit</p>
+            <p class="text-xs text-iron-400 leading-relaxed">Weekly notebook synthesis to detect blind spots, surfacing underlying drift before it spikes[cite: 1, 5, 7].</p>
           </div>
         </div>
       </section>
 
       <!-- Section II -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">02 //</span>
+      <section class="mb-12">
+        <h2 class="text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="font-mono text-xs text-emerald-400">02 //</span>
           Radical Privacy and the Honest Mirror
         </h2>
         <p>
-          The bedrock condition that makes this system function is simple: <strong>no one else is looking.</strong>
+          The bedrock condition that makes this system function is simple: <strong class="text-white">no one else is looking.</strong>
         </p>
         <p>
-          Not a sponsor, not a therapist, not a spouse, and not an app developer harvesting personal reflections for a cloud database or marketing algorithm. 
+          Not a sponsor, not a therapist, not a spouse, and not an app developer harvesting personal reflections for a cloud database or marketing algorithm[cite: 1].
         </p>
         <p>
-          Early in recovery, even when we genuinely intend to be honest, an instinctive social filter runs in the background. We curate our words just in case someone glances at the spiral notebook or accesses the screen. We downplay our motives, soften the edges of our anger, and write what sounds good. Because this vault lives strictly on local disk, that protective performance can finally drop[cite: 1].
+          Early in recovery, even when we genuinely intend to be honest, an instinctive social filter runs in the background. We curate our words just in case someone glances at the spiral notebook or accesses the screen[cite: 7]. We downplay our motives, soften the edges of our anger, and write what sounds acceptable. Because this vault lives strictly on local disk, that protective performance can finally drop[cite: 1].
         </p>
-        <div class="p-5 my-6 rounded-lg bg-vault-900 border-l-4 border-emerald-500 border-y border-r border-iron-800">
-          <p class="text-sm md:text-base text-iron-200 italic mb-2">
+        
+        <div class="steel-card p-4 rounded-lg border-l-2 border-emerald-400 my-6">
+          <p class="text-xs md:text-sm text-iron-200 italic mb-2 leading-relaxed">
             "What I found for myself is that having a space where zero curation was required allowed me to become about 90% honest on the page. I still have a running mental ledger of things I haven't quite brought myself to type out yet, but that unwritten list shrinks every single week."
           </p>
-          <p class="text-xs font-mono text-iron-500 uppercase tracking-wider">
-            Telemetry Insight // The Privacy Multiplier
+          <p class="text-[11px] font-mono text-iron-500 uppercase tracking-wider">
+            Telemetry Observation // The Privacy Multiplier
           </p>
         </div>
+
         <p>
-          More importantly, <strong>honesty on the page proved to be a leading indicator for honesty in the physical world.</strong> The more ruthlessly truthful I became inside these local files, the more honest I naturally became in real life—a lagging indicator of what was being audited in private[cite: 7]. Integrity is built in the dark on an un-curated page.
+          More importantly, <strong class="text-white">honesty on the page proved to be a leading indicator for honesty in the physical world.</strong> The more ruthlessly truthful I became inside these local files, the more honest I naturally became in real life—a lagging indicator of what was being audited in private[cite: 7]. Integrity is built in the dark on an un-curated page.
         </p>
       </section>
 
       <!-- Section III -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">03 //</span>
-          The Daily Note & Behavioral Telemetry
+      <section class="mb-12">
+        <h2 class="text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="font-mono text-xs text-emerald-400">03 //</span>
+          The Daily Note &amp; Behavioral Telemetry
         </h2>
         <p>
           Every day begins with an automated note generated by a templating trigger. Rather than facing a blank page, you are met with a concise, fixed set of diagnostic checkpoints designed to take less than five minutes[cite: 7]:
         </p>
 
-        <div class="space-y-4 my-6 font-sans">
+        <div class="space-y-3 my-6">
           <!-- Checkpoint 1 -->
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
+          <div class="steel-card p-4 rounded-lg">
             <div class="flex items-center gap-2 mb-2">
-              <span class="font-mono text-xs px-2 py-0.5 rounded bg-iron-800 text-iron-300">Checkpoint 01</span>
-              <h3 class="text-sm font-semibold text-iron-100">Meeting & Maintenance Check</h3>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-iron-800 text-iron-300">Checkpoint 01</span>
+              <h3 class="text-sm font-semibold text-white">Meeting &amp; Maintenance Check</h3>
             </div>
-            <p class="text-xs text-iron-400 font-serif leading-relaxed">
-              Binary check (Yes/No)[cite: 7]. Tracking attendance and grounding disciplines. A single missed day is routine scheduling; a trailing 3-day negative trend constitutes an active system alert requiring an immediate outreach call[cite: 7].
-            </p>
-          </div>
-
-          <!-- Checkpoint 2 -->
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="font-mono text-xs px-2 py-0.5 rounded bg-iron-800 text-iron-300">Checkpoint 02</span>
-              <h3 class="text-sm font-semibold text-iron-100">The Defect Audit</h3>
-            </div>
-            <p class="text-xs text-iron-400 font-serif leading-relaxed mb-3">
-              Fast, actionable checkpoints routing daily friction into primary operational categories[cite: 7]:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-              <div class="p-2.5 rounded bg-vault-950 border border-iron-800/80">
-                <span class="font-mono text-beacon-400 block mb-1">Pride & Ego</span>
-                <span class="text-iron-400 font-serif">Posturing, hiding mistakes, superiority, or seeking external validation[cite: 6, 7].</span>
-              </div>
-              <div class="p-2.5 rounded bg-vault-950 border border-iron-800/80">
-                <span class="font-mono text-amber-400 block mb-1">Fear & Control</span>
-                <span class="text-iron-400 font-serif">Manipulating people or outcomes to prevent loss or force our self-will[cite: 6, 7].</span>
-              </div>
-              <div class="p-2.5 rounded bg-vault-950 border border-iron-800/80">
-                <span class="font-mono text-iron-400 block mb-1">Sloth & Avoidance</span>
-                <span class="text-iron-400 font-serif">Acedia, procrastination, numbness, or hiding behind false busyness[cite: 6, 7].</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Checkpoint 3 -->
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="font-mono text-xs px-2 py-0.5 rounded bg-iron-800 text-iron-300">Checkpoint 03</span>
-              <h3 class="text-sm font-semibold text-iron-100">The Daily Inventory</h3>
-            </div>
-            <p class="text-xs text-iron-400 font-serif leading-relaxed">
-              <strong>Amends / Restitution:</strong> Any relational damage, sharp reaction, or dishonesty identified during the day must have a concrete, actionable amends plan drafted before sleeping—not passive awareness[cite: 7]. Coupled with <strong>Gratitude</strong>: brief, factual anchors in tangible reality, deliberately avoiding toxic positivity.
-            </p>
-          </div>
-
-          <!-- Checkpoint 4 -->
-          <div class="p-4 rounded-lg bg-vault-900 border border-iron-800">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="font-mono text-xs px-2 py-0.5 rounded bg-iron-800 text-iron-300">Checkpoint 04</span>
-              <h3 class="text-sm font-semibold text-iron-100">The Narrative of the Day (Original Thought)</h3>
-            </div>
-            <p class="text-xs text-iron-400 font-serif leading-relaxed">
-              A clean, unstructured space for open prose, unvarnished field observations, and processing events as they occurred—completely decoupled from external commentary.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section IV -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">04 //</span>
-          Connecting the Daily Grind to "Discovery Nodes"
-        </h2>
-        <p>
-          A journal entry should not be a dead document buried in an archive folder[cite: 5, 7]. In this architecture, daily entries actively link into permanent <strong>Discovery Nodes</strong>[cite: 5].
-        </p>
-        <p>
-          When you log an episode of control or pride in a daily note, you link it directly to a permanent concept note using standard markdown wikilinks: <code>[[Pride]]</code>, <code>[[Fear_Control]]</code>, or <code>[[Acedia]]</code>.
-        </p>
-        <div class="p-4 my-6 rounded-lg bg-vault-900 border border-iron-800 font-sans">
-          <div class="flex items-start gap-3">
-            <span class="text-beacon-400 font-mono text-lg">&bull;</span>
-            <div>
-              <p class="text-sm font-semibold text-iron-200">The Compounding Value</p>
-              <p class="text-xs text-iron-400 font-serif mt-1">
-                Over three, six, or twelve months, opening the <code>[[Pride]]</code> node does not give you a textbook definition; it reveals an unvarnished ledger of every time that specific defect surfaced in your real life[cite: 5, 6].
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 mt-4 pt-4 border-t border-iron-800/80">
-            <span class="text-amber-400 font-mono text-lg">&bull;</span>
-            <div>
-              <p class="text-sm font-semibold text-iron-200">Spotting the Script</p>
-              <p class="text-xs text-iron-400 font-serif mt-1">
-                You begin to see that your defects aren't random moods—they are repetitive, predictable scripts triggered by specific people, environments, or pressures[cite: 6, 7]. The daily notes become the raw telemetry building genuine self-knowledge over time[cite: 1, 5].
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section V -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">05 //</span>
-          The Two-Tone Rule: Separating Fact from Story
-        </h2>
-        <p>
-          A core technical feature embedded in the YAML frontmatter of every note is the <strong>Attribution Delimiter</strong>:
-        </p>
-        
-        <div class="my-6 p-4 rounded-lg bg-vault-950 border border-iron-800 font-mono text-xs overflow-x-auto text-iron-300">
-          <span class="text-iron-500">---</span><br>
-          <span class="text-beacon-400">attribution-rule:</span> <span class="text-amber-400">"Strictly classify authorship by section headers: 
-(1) 'External Source / Exegesis / Reading' denotes third-party material or heard remarks.
-(2) 'Personal Reflection / Original Thought' denotes authentic first-person telemetry."</span><br>
-          <span class="text-iron-500">---</span>
-        </div>
-
-        <p>
-          When logging daily events, the note structure enforces a clean separation:
-        </p>
-        <ul class="list-disc pl-6 space-y-2 mb-4 font-serif">
-          <li><strong>The Facts (External Reality):</strong> What actually occurred or what was verbatim said—without adjectives, motive attribution, or emotional interpretation[cite: 6].</li>
-          <li><strong>The Story (Internal Reaction):</strong> What my alcoholic brain made it mean[cite: 6].</li>
-        </ul>
-        <p>
-          This prevents an overthinking mind from rewriting reality and guarantees that any review tool can cleanly distinguish between observable facts and defensive narratives[cite: 6].
-        </p>
-      </section>
-
-      <!-- Section VI -->
-      <section class="mb-14">
-        <h2 class="font-sans text-xl md:text-2xl font-bold text-iron-100 mb-6 flex items-center gap-3">
-          <span class="font-mono text-sm text-beacon-400">06 //</span>
-          Weekly Audits: Finding Blindspots with Notebook Analysis
-        </h2>
-        <p>
-          Writing daily notes is only half the workbench; the other half is reading the telemetry[cite: 1].
-        </p>
-        <p>
-          Early on, I found that taking a week’s worth of daily journal entries and active step work and dropping them into NotebookLM provided a powerful, detached mirror[cite: 1, 5]. Asking the notebook to analyze recent trends revealed patterns I was completely blind to in the daily weeds[cite: 1]:
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6 font-sans text-xs">
-          <div class="p-3.5 rounded bg-vault-900 border border-iron-800">
-            <span class="text-beacon-400 font-mono block mb-1">01 / Defect Spikes</span>
-            <span class="text-iron-400 font-serif">Which specific character defects trended upward over the last seven days[cite: 5, 6]?</span>
-          </div>
-          <div class="p-3.5 rounded bg-vault-900 border border-iron-800">
-            <span class="text-amber-400 font-mono block mb-1">02 / Hidden Resentments</span>
-            <span class="text-iron-400 font-serif">Is there a recurring name or underlying anxiety quietly driving my behavior more than I realized[cite: 6, 7]?</span>
-          </div>
-          <div class="p-3.5 rounded bg-vault-900 border border-iron-800">
-            <span class="text-emerald-400 font-mono block mb-1">03 / Step Codification</span>
-            <span class="text-iron-400 font-serif">How can I codify the breakthroughs from this week's step work so they don't evaporate[cite: 1, 5]?</span>
-          </div>
-        </div>
-
-        <p>
-          An unchecked mind will reread its own journals and find ways to justify its actions[cite: 6]. Running an objective weekly query holds up a clear mirror, codifies the breakthroughs from your step work, and asks the only question that matters[cite: 1, 5]:
-        </p>
-        
-        <div class="p-5 my-6 rounded-lg bg-vault-900 border-l-4 border-beacon-500 border-y border-r border-iron-800 font-sans">
-          <p class="text-base text-iron-100 font-semibold mb-1">
-            "Now that you have mapped these blindspots and patterns, what is the single next right physical action required in the physical world?"[cite: 1, 6]
-          </p>
-          <p class="text-xs font-mono text-iron-500 uppercase tracking-widest mt-2">
-            The Terminating Condition // Action Over Rumination[cite: 6]
-          </p>
-        </div>
-      </section>
-
-    </article>
-
-    <!-- Bottom Navigation -->
-    <div class="pt-8 mt-12 border-t border-iron-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <a href="story.html" class="w-full sm:w-auto px-5 py-3 rounded-lg border border-iron-800 hover:border-iron-700 bg-vault-900 text-iron-300 hover:text-iron-100 font-mono text-xs flex items-center justify-center sm:justify-start gap-2 transition-colors">
-        <span>&larr;</span>
-        <span>Origin & Architecture</span>
-      </a>
-      <a href="index.html" class="w-full sm:w-auto px-5 py-3 rounded-lg bg-beacon-500 hover:bg-beacon-400 text-vault-950 font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
-        <span>Vault Home</span>
-        <span>&rarr;</span>
-      </a>
-    </div>
-
-  </main>
-</body>
-</html>
+            <p class="text-xs text-iron-400 leading-relaxed">
+              Binary check (Yes/No)[cite: 7]. Tracking attendance and grounding disciplines. A single
